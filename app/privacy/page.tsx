@@ -11,7 +11,7 @@ const sections = [
   {
     number: "1",
     title: "Introduction",
-    content: `RightOfAccess ("RightOfAccess," "we," "our," or "us") operates a healthcare data platform that helps Social Security Disability attorneys and their authorized representatives identify their clients' medical providers and treatment history using patient-authorized insurance claims data. This Privacy Policy describes how we collect, use, store, share, and protect your information, including Protected Health Information ("PHI") as defined under the Health Insurance Portability and Accountability Act ("HIPAA").
+    content: `RightOfAccess is a product operated by Review Fruit LLC, a Utah limited liability company ("RightOfAccess," "we," "our," or "us") operates a healthcare data platform that helps Social Security Disability attorneys and their authorized representatives identify their clients' medical providers and treatment history using patient-authorized insurance claims data. This Privacy Policy describes how we collect, use, store, share, and protect your information, including Protected Health Information ("PHI") as defined under the Health Insurance Portability and Accountability Act ("HIPAA").
 
 This Privacy Policy applies to all users of our services, including Medicare beneficiaries who authorize access to their claims data through the CMS Blue Button 2.0 API, individuals who authorize access through commercial health plan Patient Access APIs, and law firm personnel who use our platform.
 
