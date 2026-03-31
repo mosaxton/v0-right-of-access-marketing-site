@@ -53,7 +53,7 @@ RightOfAccess is a technology platform. We are not a law firm, medical provider,
     list: [
       "RightOfAccess will never request, access, or store your health plan login credentials (username or password).",
       "Authorization is entirely voluntary. No patient is required to authorize access as a condition of legal representation.",
-      "You may revoke authorization at any time by disconnecting through our platform, contacting us at moses@rightofaccess.co, or managing connected applications through your health plan's member portal.",
+      "You may revoke authorization at any time by disconnecting through our platform, contacting us at legal@rightofaccess.co, or managing connected applications through your health plan's member portal.",
       "Revoking authorization will stop future data retrieval but will not automatically delete data that has already been retrieved. You may separately request deletion of previously retrieved data as described in our Privacy Policy.",
       "When authorizing access through Medicare, you may choose to exclude personal demographic information (name, date of birth, race, sex) from the data shared with our application. This choice is presented during the Medicare.gov authorization flow.",
     ],
@@ -146,7 +146,7 @@ Nothing in these Terms limits or excludes liability that cannot be limited or ex
   {
     number: "13",
     title: "Termination",
-    content: `Either party may terminate these Terms at any time. Patients may revoke authorization as described in Section 4. Law firms may cancel their account by providing written notice to moses@rightofaccess.co.
+    content: `Either party may terminate these Terms at any time. Patients may revoke authorization as described in Section 4. Law firms may cancel their account by providing written notice to legal@rightofaccess.co.
 
 RightOfAccess may suspend or terminate your access to the Service immediately if we reasonably believe you have violated these Terms, used the Service in a manner that poses a security risk, or engaged in activity that may cause legal liability for us or other users.
 
@@ -190,7 +190,7 @@ Upon termination, your right to use the Service ceases immediately. Provisions o
       },
       {
         title: "Notices",
-        content: "All notices to RightOfAccess should be sent to moses@rightofaccess.co. We will send notices to you at the email address associated with your account.",
+        content: "All notices to RightOfAccess should be sent to legal@rightofaccess.co. We will send notices to you at the email address associated with your account.",
       },
     ],
   },
@@ -200,7 +200,7 @@ Upon termination, your right to use the Service ceases immediately. Provisions o
     content: "For questions about these Terms of Service, please contact us:",
     contact: {
       company: "RightOfAccess LLC",
-      email: "moses@rightofaccess.co",
+      email: "legal@rightofaccess.co",
       address: "1185 W 100 S, Pleasant Grove, UT 84062",
       phone: "385-441-6676",
     },
