@@ -20,9 +20,6 @@ export function DashboardSidebar({ activeView, onNavClick }: DashboardSidebarPro
       {/* Logo */}
       <div className="p-6 border-b-2 border-black/20">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-gold rounded-full border-2 border-black flex items-center justify-center">
-            <span className="text-foreground font-black text-sm">RA</span>
-          </div>
           <span className="text-primary-foreground font-black text-lg">RightOfAccess</span>
         </div>
       </div>
