@@ -15,7 +15,7 @@ const sections = [
 
 This Privacy Policy applies to all users of our services, including Medicare beneficiaries who authorize access to their claims data through the CMS Blue Button 2.0 API, individuals who authorize access through commercial health plan Patient Access APIs, and law firm personnel who use our platform.
 
-We are committed to protecting your privacy and ensuring you understand exactly how your data is collected, used, and shared. If you have questions, contact us at moses@rightofaccess.co.`,
+We are committed to protecting your privacy and ensuring you understand exactly how your data is collected, used, and shared. If you have questions, contact us at privacy@rightofaccess.co.`,
   },
   {
     number: "2",
@@ -159,15 +159,15 @@ We are committed to protecting your privacy and ensuring you understand exactly 
     subsections: [
       {
         title: "7.1 Right to Access",
-        content: "You may request a copy of the health claims data we have retrieved on your behalf at any time by contacting us at moses@rightofaccess.co.",
+        content: "You may request a copy of the health claims data we have retrieved on your behalf at any time by contacting us at privacy@rightofaccess.co.",
       },
       {
         title: "7.2 Right to Revoke Authorization",
-        content: "You may revoke your authorization at any time by disconnecting your health plan through our platform, contacting us at moses@rightofaccess.co, or revoking access directly through your health plan's member portal. Revocation takes effect immediately.",
+        content: "You may revoke your authorization at any time by disconnecting your health plan through our platform, contacting us at privacy@rightofaccess.co, or revoking access directly through your health plan's member portal. Revocation takes effect immediately.",
       },
       {
         title: "7.3 Right to Deletion",
-        content: "You may request that we delete your health claims data at any time by contacting us at moses@rightofaccess.co. We will process deletion requests within 30 days and confirm deletion in writing.",
+        content: "You may request that we delete your health claims data at any time by contacting us at privacy@rightofaccess.co. We will process deletion requests within 30 days and confirm deletion in writing.",
       },
       {
         title: "7.4 Right to Opt Out of Personal Data Sharing",
@@ -233,12 +233,12 @@ We are committed to protecting your privacy and ensuring you understand exactly 
   {
     number: "12",
     title: "Children's Privacy",
-    content: "Our services are intended for use by adults age 18 and older. We do not knowingly collect health information from children under 18 without the consent of a parent or legal guardian. If you believe we have inadvertently collected information from a child, please contact us at moses@rightofaccess.co and we will promptly delete the data.",
+    content: "Our services are intended for use by adults age 18 and older. We do not knowingly collect health information from children under 18 without the consent of a parent or legal guardian. If you believe we have inadvertently collected information from a child, please contact us at privacy@rightofaccess.co and we will promptly delete the data.",
   },
   {
     number: "13",
     title: "State-Specific Privacy Rights",
-    content: "Depending on your state of residence, you may have additional privacy rights under state law. These may include the right to know what personal information we collect, the right to request deletion, the right to opt out of the sale of personal information (note: we do not sell personal information), and the right to non-discrimination for exercising your privacy rights. Contact us at moses@rightofaccess.co to exercise your rights.",
+    content: "Depending on your state of residence, you may have additional privacy rights under state law. These may include the right to know what personal information we collect, the right to request deletion, the right to opt out of the sale of personal information (note: we do not sell personal information), and the right to non-discrimination for exercising your privacy rights. Contact us at privacy@rightofaccess.co to exercise your rights.",
   },
   {
     number: "14",
@@ -258,7 +258,7 @@ We are committed to protecting your privacy and ensuring you understand exactly 
     content: "If you have questions about this Privacy Policy, wish to exercise your privacy rights, or have concerns about how your data is being handled, please contact us:",
     contact: {
       company: "RightOfAccess",
-      email: "moses@rightofaccess.co",
+      email: "privacy@rightofaccess.co",
       address: "1185 W 100 S, Pleasant Grove, UT 84062",
       phone: "385-441-6676",
     },
