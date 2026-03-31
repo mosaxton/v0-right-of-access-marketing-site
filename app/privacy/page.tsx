@@ -44,16 +44,10 @@ We are committed to protecting your privacy and ensuring you understand exactly 
           "Amounts billed and paid by your health plan",
         ],
       },
-      {
-        title: "2.3 Information We Collect Automatically",
-        content: "When you interact with our platform, we may automatically collect:",
-        list: [
-          "Device information (browser type, operating system)",
-          "IP address and approximate geographic location",
-          "Usage data (pages viewed, features used, time spent)",
-          "Cookies and similar tracking technologies for session management and security",
-        ],
-      },
+  {
+    title: "2.3 Information We Collect Automatically",
+    content: "When you interact with our platform, we may automatically collect technical information required for platform operation and security, including device information (browser type, operating system), IP address and approximate geographic location, and usage data (pages viewed, features used, time spent). We do not use third-party advertising or analytics cookies. Session management is handled through secure, server-side authentication tokens only.",
+  },
     ],
   },
   {
