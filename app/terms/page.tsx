@@ -199,7 +199,7 @@ Upon termination, your right to use the Service ceases immediately. Provisions o
     title: "Contact Information",
     content: "For questions about these Terms of Service, please contact us:",
     contact: {
-      company: "RightOfAccess LLC",
+      company: "Review Fruit LLC operating as RightOfAccess",
       email: "legal@rightofaccess.co",
       address: "1185 W 100 S, Pleasant Grove, UT 84062",
       phone: "385-441-6676",
