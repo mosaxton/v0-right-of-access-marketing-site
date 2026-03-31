@@ -21,7 +21,7 @@ const faqs = [
     answer: "Yes. We operate under a Business Associate Agreement (BAA) and all data is encrypted in transit and at rest on HIPAA-compliant infrastructure. We're built on the CMS-mandated Patient Access APIs (CMS-9115-F).",
   },
   {
-    question: "Do you integrate with case management platforms?",
+    question: "Do you integrate with Prevail, SmartAdvocate, or CASEpeer?",
     answer: "Today, provider maps are accessible in your RightOfAccess dashboard and exportable as structured data. Direct integrations with case management software are on our roadmap.",
   },
 ]
