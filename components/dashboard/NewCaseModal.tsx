@@ -501,7 +501,7 @@ export function NewCaseModal({ isOpen, onClose }: NewCaseModalProps) {
                         : "bg-primary text-primary-foreground border-2 border-black brutalist-button"
                     }`}
                   >
-                    {isSubmitting ? "Creating Case..." : "Create Case & Send Auth Link"}
+                    {isSubmitting ? "Copying..." : "Copy auth link to clipboard"}
                   </button>
                 </div>
               </div>
