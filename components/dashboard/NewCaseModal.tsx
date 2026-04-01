@@ -187,9 +187,10 @@ export function NewCaseModal({ isOpen, onClose }: NewCaseModalProps) {
     }))
   }
 
-  const handleSendToSelf = () => {
-    // TODO: Implement send to self functionality
-    alert("Authorization link will be sent to your email address")
+  const handleCopyAuthLink = () => {
+    const authLink = "https://auth.rightofaccess.com/verify/case-123456"
+    navigator.clipboard.writeText(authLink)
+    alert("Authorization link copied to clipboard!")
   }
 
   const canContinueStep1 = formData.claimantName && formData.dateOfBirth && (formData.phone || formData.email)
@@ -452,11 +453,11 @@ export function NewCaseModal({ isOpen, onClose }: NewCaseModalProps) {
                 {/* Send to Self Button */}
                 <button
                   type="button"
-                  onClick={handleSendToSelf}
+                  onClick={handleCopyAuthLink}
                   className="w-full py-3 rounded-xl font-semibold text-sm text-foreground/70 bg-transparent border-2 border-dashed border-black/20 hover:border-black/40 hover:text-foreground transition-all flex items-center justify-center gap-2"
                 >
                   <Send className="w-4 h-4" />
-                  Send yourself a copy
+                  Copy auth link to clipboard
                 </button>
 
                 {/* Summary */}
@@ -501,7 +502,7 @@ export function NewCaseModal({ isOpen, onClose }: NewCaseModalProps) {
                         : "bg-primary text-primary-foreground border-2 border-black brutalist-button"
                     }`}
                   >
-                    {isSubmitting ? "Copying..." : "Copy auth link to clipboard"}
+                    {isSubmitting ? "Creating Case..." : "Create Case & Send Auth Link"}
                   </button>
                 </div>
               </div>
