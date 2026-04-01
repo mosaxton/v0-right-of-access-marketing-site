@@ -51,7 +51,7 @@ const defaultSections: FooterSection[] = [
 
 export const Footer = ({
   companyName = "Right of Access",
-  tagline = "Medical Records Retrieval for Personal Injury Law Firms",
+  tagline = "Provider Mapping for SSDI Law Firms",
   sections = defaultSections,
   socialLinks = {
     linkedin: "https://www.linkedin.com/in/moses-smith12/",
