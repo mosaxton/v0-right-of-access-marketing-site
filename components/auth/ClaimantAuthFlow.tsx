@@ -8,6 +8,7 @@ interface ClaimantAuthFlowProps {
   firmName: string
   firmPhone: string
   payerName: string
+  firmLogoUrl?: string
   payerLogoUrl?: string
 }
 
@@ -15,6 +16,8 @@ export default function ClaimantAuthFlow({
   firmName = "Smith & Associates",
   firmPhone = "(801) 555-0192",
   payerName = "Medicare",
+  firmLogoUrl,
+  payerLogoUrl,
 }: ClaimantAuthFlowProps) {
   const [consentChecked, setConsentChecked] = useState(false)
 
@@ -31,14 +34,30 @@ export default function ClaimantAuthFlow({
         {/* Overlapping Logos */}
         <div className="flex justify-center relative h-24">
           <div className="absolute left-1/2 transform -translate-x-16 top-0">
-            <div className="w-20 h-20 rounded-full bg-gray-800 border-4 border-white flex items-center justify-center shadow-lg">
-              <span className="text-white font-black text-xl">✓</span>
-            </div>
+            {firmLogoUrl ? (
+              <img 
+                src={firmLogoUrl} 
+                alt={firmName}
+                className="w-20 h-20 rounded-full border-4 border-white shadow-lg object-cover"
+              />
+            ) : (
+              <div className="w-20 h-20 rounded-full bg-gray-800 border-4 border-white flex items-center justify-center shadow-lg">
+                <span className="text-white font-black text-xl">{firmName.charAt(0)}</span>
+              </div>
+            )}
           </div>
           <div className="absolute right-1/2 transform translate-x-16 top-0">
-            <div className="w-20 h-20 rounded-full bg-[#0F2044] border-4 border-white flex items-center justify-center shadow-lg">
-              <span className="text-white font-black text-sm text-center px-2 leading-tight">{payerName.substring(0, 3)}</span>
-            </div>
+            {payerLogoUrl ? (
+              <img 
+                src={payerLogoUrl} 
+                alt={payerName}
+                className="w-20 h-20 rounded-full border-4 border-white shadow-lg object-cover"
+              />
+            ) : (
+              <div className="w-20 h-20 rounded-full bg-[#0F2044] border-4 border-white flex items-center justify-center shadow-lg">
+                <span className="text-white font-black text-sm text-center px-2 leading-tight">{payerName.substring(0, 3)}</span>
+              </div>
+            )}
           </div>
         </div>
 

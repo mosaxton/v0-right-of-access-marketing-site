@@ -20,6 +20,7 @@ export default function ClaimantAuthPage({ params }: { params: { token: string }
   return (
     <ClaimantAuthFlow
       firmName={authData.firmName}
+      firmLogo={authData.firmLogo}
       firmPhone={authData.firmPhone}
       payerName={authData.payerName}
       payerLogoUrl={authData.payerLogoUrl}
