@@ -49,7 +49,7 @@ export const IntegrationCarousel = () => {
 
         <div className="brutalist-card text-center bg-primary rounded-[2rem] p-6">
           <p className="text-primary-foreground font-bold text-base">
-            Works with Medicare, UnitedHealthcare, Humana, Aetna, Anthem, Cigna, and 200+ other plans.
+            Works with Medicare and the 7 largest commercial payers — covering ~80% of US claimants.
           </p>
         </div>
       </div>
