@@ -45,13 +45,13 @@ export const ROISection = () => {
             </h3>
             <ul className="space-y-4 text-foreground/80 font-medium text-sm leading-relaxed">
               <li>
-                Per case: <span className="font-black text-foreground">$49</span> (recoverable as case expense)
+                Per case: <span className="font-black text-foreground">$199</span> (recoverable as case expense)
               </li>
               <li>
-                At 40 cases/month: <span className="font-black text-foreground">$1,960/mo</span>
+                At 20 cases/month: <span className="font-black text-foreground">$3,980/mo</span>
               </li>
               <li>
-                At 100 cases/month: <span className="font-black text-foreground">$3,900/mo</span> (volume rate)
+                At 40 cases/month: <span className="font-black text-foreground">$7,960/mo</span>
               </li>
             </ul>
             <p className="mt-6 text-foreground/60 text-xs italic">
@@ -62,7 +62,7 @@ export const ROISection = () => {
           {/* Column 3: Pull Quote (distinct treatment) */}
           <div className="brutalist-card bg-primary rounded-[2rem] p-8 flex flex-col justify-center">
             <p className="text-primary-foreground font-medium text-lg italic leading-relaxed mb-6">
-              &ldquo;One additional won case at the average <span className="text-gold font-black not-italic">$4,500</span> SSDI fee covers <span className="text-gold font-black not-italic">2+ months</span> of ROA at 40 cases/month.&rdquo;
+              &ldquo;One additional won case at the average <span className="text-gold font-black not-italic">$4,500</span> SSDI fee covers more than a month of ROA at 20 cases/month.&rdquo;
             </p>
             <p className="text-primary-foreground font-black text-sm">
               ROA pays for itself on the first prevented denial.
