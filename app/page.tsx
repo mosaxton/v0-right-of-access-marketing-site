@@ -5,6 +5,7 @@ import { IntegrationCarousel } from "@/components/IntegrationCarousel"
 import { ROISection } from "@/components/ROISection"
 import { PricingSection } from "@/components/PricingSection"
 import { FAQSection } from "@/components/FAQSection"
+import { FounderSection } from "@/components/FounderSection"
 import { Footer } from "@/components/Footer"
 
 const FinalCTA = () => {
@@ -61,6 +62,7 @@ export default function Page() {
       </section>
       <PricingSection />
       <FAQSection />
+      <FounderSection />
       <FinalCTA />
       <Footer tagline="Provider Discovery for SSDI Law Firms" />
     </>
