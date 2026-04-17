@@ -37,7 +37,7 @@ export const BankingScaleHero = () => {
                 href="https://calendly.com/mosaxton-s/free-demo-call"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="brutalist-button inline-flex items-center gap-3 bg-gold text-foreground px-8 py-4 rounded-full font-black text-lg"
+                className="brutalist-button inline-flex items-center gap-3 bg-muted text-foreground border-2 border-black px-8 py-4 rounded-full font-black text-lg"
               >
                 Start Free Pilot
               </a>
