@@ -54,7 +54,7 @@ export default function Page() {
             href="https://calendly.com/mosaxton-s/free-demo-call"
             target="_blank"
             rel="noopener noreferrer"
-            className="brutalist-button inline-block mt-8 bg-gold text-foreground px-10 py-4 rounded-full font-black text-lg"
+            className="brutalist-button inline-block mt-8 bg-muted text-primary px-10 py-4 rounded-full font-black text-lg"
           >
             Book a 15-Minute Demo
           </a>
