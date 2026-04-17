@@ -2,6 +2,7 @@ import { PortfolioNavbar } from "@/components/PortfolioNavbar"
 import { BankingScaleHero } from "@/components/BankingScaleHero"
 import { ProductTeaserCard } from "@/components/ProductTeaserCard"
 import { IntegrationCarousel } from "@/components/IntegrationCarousel"
+import { ROISection } from "@/components/ROISection"
 import { PricingSection } from "@/components/PricingSection"
 import { FAQSection } from "@/components/FAQSection"
 import { Footer } from "@/components/Footer"
@@ -36,6 +37,7 @@ export default function Page() {
       <BankingScaleHero />
       <ProductTeaserCard />
       <IntegrationCarousel />
+      <ROISection />
       <section className="w-full px-8 py-20 bg-primary">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-primary-foreground/80 font-medium text-lg mb-4 uppercase tracking-widest text-sm">
@@ -47,6 +49,14 @@ export default function Page() {
           <p className="mt-6 text-xl font-black text-gold">
             Maximize your intake. Minimize your risk.
           </p>
+          <a
+            href="https://calendly.com/mosaxton-s/free-demo-call"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="brutalist-button inline-block mt-8 bg-gold text-foreground px-10 py-4 rounded-full font-black text-lg"
+          >
+            Book a 15-Minute Demo
+          </a>
         </div>
       </section>
       <PricingSection />
