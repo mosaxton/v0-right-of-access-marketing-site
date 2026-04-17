@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react"
 
 export const FounderSection = () => {
   return (
-    <section className="w-full px-8 py-20 bg-muted">
+    <section id="founder" className="w-full px-8 py-20 bg-muted">
       <div className="max-w-5xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-12 items-start">
           {/* Left Column - Photo */}
