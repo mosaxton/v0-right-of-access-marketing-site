@@ -24,7 +24,7 @@ const faqs = [
     question: "What if my client doesn't have an online account with their insurer?",
     answer: (
       <p className="text-foreground font-medium leading-relaxed">
-        The client doesn't need an existing account — they just need to be able to verify their identity with their insurer when they click the authorization link. For Medicare, that means having a <b>Medicare.gov</b> login (and if they don't, the site walks them through creating one in about three minutes). Commercial payers like <b>UnitedHealthcare</b> and <b>Aetna</b> let the client register and authorize in the same flow. The one case where this gets harder is when the client doesn't have email or smartphone access at all — <i>for those clients, the workflow is the same as any other intake step that requires their participation, and your paralegal walks them through it on the phone</i>.
+        The client doesn't need an existing account — they just need to be able to verify their identity with their insurer when they click the authorization link. For Medicare, that means having a <b>Medicare.gov</b> login (and if they don't, the site walks them through creating one in about three minutes). Commercial payers like <b>UnitedHealthcare</b> and <b>Aetna</b> let the client register and authorize in the same flow. The one case where this gets harder is when the client doesn't have email or smartphone access at all — <i>for those clients, the workflow is the same as any other intake step that requires their participation, and your paralegal walks them through it on the phone</i>. And if for any reason the authorization doesn't go through, you're not charged — ROA only bills for cases where we successfully retrieve provider data.
       </p>
     ),
   },
@@ -40,7 +40,7 @@ const faqs = [
     question: "How is this different from sending HIPAA medical records requests?",
     answer: (
       <p className="text-foreground font-medium leading-relaxed">
-        Records requests retrieve documents from a provider you already know about. ROA tells you which providers exist before you've sent a single request. They're complementary, not competing — you'll still send records requests after using ROA, but you'll send them to the right providers, and <i>you won't waste $50 and three weeks chasing a primary care doc the client mentioned but who only saw them once for a flu shot</i>. Most firms find that ROA pays for itself by eliminating <i>3–5 wasted records requests per case</i> before it even gets to the bigger savings on hearings and denials.
+        Records requests retrieve documents from a provider you already know about. ROA tells you which providers exist before you've sent a single request. They're complementary, not competing — you'll still send records requests after using ROA, but you'll send them to the right providers, and you won't waste $50 and three weeks chasing a primary care doc the client mentioned but who only saw them once for a flu shot. Most firms find that ROA pays for itself by eliminating 3–5 wasted records requests per case before it even gets to the bigger savings on hearings and denials. And unlike records requests — which you pay for whether they come back useful or not — ROA only charges when we successfully retrieve provider data.
       </p>
     ),
   },
@@ -57,6 +57,14 @@ const faqs = [
     answer: (
       <p className="text-foreground font-medium leading-relaxed">
         Today: CSV and PDF export of the Provider Map, which paralegals attach to the matter in their case management system. Direct API integrations with <b>Prevail</b>, <b>SmartAdvocate</b>, and <b>CASEpeer</b> are on the roadmap and we're prioritizing them based on which systems our pilot firms use most. If your firm runs on one of these and direct integration would be a deciding factor, <i>tell me on the demo call — pilot firms get input on the integration order</i>.
+      </p>
+    ),
+  },
+  {
+    question: "What happens if a case doesn't return any data?",
+    answer: (
+      <p className="text-foreground font-medium leading-relaxed">
+        You don't pay. ROA only bills for cases where we successfully retrieve provider data from the client's insurer. If the authorization doesn't go through, the insurer returns an empty payload, or for any other reason we can't deliver a Provider Map with at least one resolved provider, the case is free. We carry the risk of the data pull, not your firm.
       </p>
     ),
   },

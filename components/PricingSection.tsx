@@ -13,6 +13,7 @@ const features = [
   "Treatment dates and visit history",
   "Works with Medicare and the 7 largest commercial payers",
   "Client authorization in 2 minutes",
+  "Only pay when we successfully retrieve provider data",
 ]
 
 export const PricingSection = () => {
