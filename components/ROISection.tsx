@@ -24,13 +24,13 @@ export const ROISection = () => {
             </h3>
             <ul className="space-y-4 text-foreground/80 font-medium text-sm leading-relaxed">
               <li>
-                Records requests to wrong providers: <span className="font-black text-foreground">$300–$800</span>
+                Wasted records spend chasing the wrong providers: <span className="font-black text-foreground">$150–$500</span> per case
               </li>
               <li>
-                Paralegal time on provider discovery: <span className="font-black text-foreground">4–6 hours</span>
+                Paralegal time spent reconstructing provider history: <span className="font-black text-foreground">2–4 hours</span> per case
               </li>
               <li>
-                One Consultative Exam from missed evidence: <span className="font-black text-foreground">delayed case + ALJ skepticism</span>
+                Consultative Exam triggered by thin evidence: <span className="font-black text-foreground">2–4 month case delay</span> + weaker hearing record
               </li>
               <li>
                 One denial that should have been an approval: <span className="font-black text-foreground">$3,000–$6,000</span> in lost contingency fees
