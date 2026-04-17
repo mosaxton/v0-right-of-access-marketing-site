@@ -15,12 +15,6 @@ const features = [
   "Client authorization in 2 minutes",
 ]
 
-const volumeTiers = [
-  { name: "Standard", price: "$49/case", volume: "Any volume", note: "—" },
-  { name: "Volume", price: "$39/case", volume: "50+ cases/mo", note: "Auto-applied" },
-  { name: "Enterprise", price: "$29/case", volume: "200+ cases/mo", note: "Auto-applied" },
-]
-
 export const PricingSection = () => {
   return (
     <section id="pricing" className="w-full px-8 py-16 bg-muted">
@@ -58,23 +52,6 @@ export const PricingSection = () => {
             <p className="mt-4 text-primary-foreground/70 text-sm italic">
               First 5 cases free. No credit card required.
             </p>
-          </div>
-        </div>
-
-        {/* Volume Comparison Table */}
-        <div className="max-w-3xl mx-auto mb-8">
-          <div className="grid grid-cols-3 border-2 border-primary rounded-2xl overflow-hidden">
-            {volumeTiers.map((tier, i) => (
-              <div
-                key={i}
-                className={`p-6 text-center ${i < volumeTiers.length - 1 ? "border-r-2 border-primary" : ""}`}
-              >
-                <div className="font-black text-foreground text-lg mb-2">{tier.name}</div>
-                <div className="text-2xl font-black text-primary mb-1">{tier.price}</div>
-                <div className="text-foreground/70 text-sm font-medium mb-2">{tier.volume}</div>
-                <div className="text-foreground/50 text-xs font-medium">{tier.note}</div>
-              </div>
-            ))}
           </div>
         </div>
 
