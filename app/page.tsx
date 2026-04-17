@@ -61,8 +61,8 @@ export default function Page() {
         </div>
       </section>
       <PricingSection />
-      <FAQSection />
       <FounderSection />
+      <FAQSection />
       <FinalCTA />
       <Footer tagline="Provider Discovery for SSDI Law Firms" />
     </>
