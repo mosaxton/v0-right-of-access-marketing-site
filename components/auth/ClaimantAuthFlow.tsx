@@ -1,8 +1,9 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { Shield, Bookmark, User, Award } from 'lucide-react'
 import Link from 'next/link'
+import { LegalModal } from './LegalModal'
 
 interface ClaimantAuthFlowProps {
   firmName: string
@@ -21,6 +22,9 @@ export default function ClaimantAuthFlow({
 }: ClaimantAuthFlowProps) {
   const [consentChecked, setConsentChecked] = useState(false)
   const [whyExpanded, setWhyExpanded] = useState(false)
+  const [openModal, setOpenModal] = useState<'terms' | 'privacy' | null>(null)
+  const termsLinkRef = useRef<HTMLButtonElement>(null)
+  const privacyLinkRef = useRef<HTMLButtonElement>(null)
 
   const handleContinue = () => {
     if (consentChecked) {
@@ -138,13 +142,29 @@ export default function ClaimantAuthFlow({
           />
           <label htmlFor="consent-checkbox" className="text-[1.05rem] font-semibold text-gray-800 cursor-pointer leading-relaxed">
             I agree to RightOfAccess&apos;s{' '}
-            <Link href="/terms" className="text-[#0F2044] underline underline-offset-2 hover:opacity-80 transition-opacity">
+            <button
+              ref={termsLinkRef}
+              type="button"
+              onClick={(e) => {
+                e.preventDefault()
+                setOpenModal('terms')
+              }}
+              className="text-[#0F2044] underline underline-offset-2 hover:opacity-80 transition-opacity bg-none border-none cursor-pointer p-0 font-semibold"
+            >
               Terms of Service
-            </Link>
+            </button>
             {' '}and{' '}
-            <Link href="/privacy" className="text-[#0F2044] underline underline-offset-2 hover:opacity-80 transition-opacity">
+            <button
+              ref={privacyLinkRef}
+              type="button"
+              onClick={(e) => {
+                e.preventDefault()
+                setOpenModal('privacy')
+              }}
+              className="text-[#0F2044] underline underline-offset-2 hover:opacity-80 transition-opacity bg-none border-none cursor-pointer p-0 font-semibold"
+            >
               Privacy Policy
-            </Link>
+            </button>
           </label>
         </div>
 
@@ -166,6 +186,70 @@ export default function ClaimantAuthFlow({
           Questions? Call {firmName} at {firmPhone}.
         </p>
       </div>
+
+      {/* Terms Modal */}
+      <LegalModal
+        isOpen={openModal === 'terms'}
+        onClose={() => setOpenModal(null)}
+        title="Terms of Service"
+      >
+        <div className="space-y-4">
+          <p>By accessing or using the RightOfAccess platform, website, or services (collectively, the "Service"), you agree to be bound by these Terms of Service ("Terms"). If you are using the Service on behalf of an organization (such as a law firm), you represent that you have the authority to bind that organization to these Terms. If you do not agree to these Terms, do not use the Service.</p>
+          
+          <p>These Terms are in addition to, and do not replace, our Privacy Policy, which is available at rightofaccess.co/privacy. In the event of any conflict between these Terms and the Privacy Policy regarding the handling of your health data, the Privacy Policy shall control.</p>
+
+          <h3 className="text-lg font-black text-[#0F2044] mt-6">Description of Service</h3>
+          <p>RightOfAccess provides a platform that enables Social Security Disability (SSDI/SSI) law firms and their authorized representatives to identify their clients' medical providers and treatment history using patient-authorized insurance claims data. The Service connects to health plan Patient Access APIs, including the CMS Blue Button 2.0 API and commercial and Medicaid health plan FHIR APIs, to retrieve Explanation of Benefits (EOB) and related claims data with the patient's explicit authorization.</p>
+
+          <p>RightOfAccess is a technology platform. We are not a law firm, medical provider, health plan, or government agency. We do not provide legal advice, medical advice, or insurance coverage determinations. We are not affiliated with, endorsed by, or operated by the Centers for Medicare & Medicaid Services (CMS), the Social Security Administration (SSA), or the U.S. Department of Health and Human Services (HHS).</p>
+
+          <h3 className="text-lg font-black text-[#0F2044] mt-6">Patient Authorization and Consent</h3>
+          <p>All access to health plan claims data through the Service requires the explicit, voluntary authorization of the patient. Authorization is obtained through the health plan's secure OAuth 2.0 authorization flow, during which the patient logs into their own health plan account and grants permission for RightOfAccess to retrieve their data.</p>
+
+          <ul className="list-disc list-inside space-y-2 text-[#0F2044]/80">
+            <li>RightOfAccess will never request, access, or store your health plan login credentials (username or password).</li>
+            <li>Authorization is entirely voluntary. No patient is required to authorize access as a condition of legal representation.</li>
+            <li>You may revoke authorization at any time by disconnecting through our platform or managing connected applications through your health plan's member portal.</li>
+          </ul>
+
+          <p className="text-xs text-[#0F2044]/60 mt-6">For the complete Terms of Service, visit <Link href="/terms" className="underline hover:opacity-70">rightofaccess.co/terms</Link></p>
+        </div>
+      </LegalModal>
+
+      {/* Privacy Modal */}
+      <LegalModal
+        isOpen={openModal === 'privacy'}
+        onClose={() => setOpenModal(null)}
+        title="Privacy Policy"
+      >
+        <div className="space-y-4">
+          <p>RightOfAccess is a product operated by Review Fruit LLC, a Utah limited liability company ("RightOfAccess," "we," "our," or "us") operates a healthcare data platform that helps Social Security Disability attorneys and their authorized representatives identify their clients' medical providers and treatment history using patient-authorized insurance claims data. This Privacy Policy describes how we collect, use, store, share, and protect your information, including Protected Health Information ("PHI") as defined under the Health Insurance Portability and Accountability Act ("HIPAA").</p>
+
+          <p>This Privacy Policy applies to all users of our services, including Medicare beneficiaries who authorize access to their claims data through the CMS Blue Button 2.0 API, individuals who authorize access through commercial health plan Patient Access APIs, and law firm personnel who use our platform.</p>
+
+          <h3 className="text-lg font-black text-[#0F2044] mt-6">Information We Collect</h3>
+          <p>When you or your authorized legal representative use our services, we may collect:</p>
+          <ul className="list-disc list-inside space-y-2 text-[#0F2044]/80">
+            <li>Your name, date of birth, mailing address, phone number, and email address</li>
+            <li>Your legal representative's name, firm name, and contact information</li>
+            <li>Information necessary to verify your identity and connect to your health plan</li>
+            <li>Your insurance plan name and member information</li>
+          </ul>
+
+          <h3 className="text-lg font-black text-[#0F2044] mt-6">How We Use Your Information</h3>
+          <p>Our primary use of your health plan claims data is to generate a provider map and treatment timeline for your authorized legal representative. This includes identifying providers you have visited, dates and types of services received, diagnoses documented in your claims, and medications prescribed — provided solely to support preparation of your Social Security Disability claim.</p>
+
+          <h3 className="text-lg font-black text-[#0F2044] mt-6">Data Security</h3>
+          <ul className="list-disc list-inside space-y-2 text-[#0F2044]/80">
+            <li>All data is encrypted in transit using TLS 1.2 or higher</li>
+            <li>All data is encrypted at rest using AES-256 encryption</li>
+            <li>Multi-factor authentication required for all platform administrator accounts</li>
+            <li>Regular vulnerability scanning and security testing</li>
+          </ul>
+
+          <p className="text-xs text-[#0F2044]/60 mt-6">For the complete Privacy Policy, visit <Link href="/privacy" className="underline hover:opacity-70">rightofaccess.co/privacy</Link></p>
+        </div>
+      </LegalModal>
     </div>
   )
 }
