@@ -20,6 +20,7 @@ export default function ClaimantAuthFlow({
   payerLogoUrl,
 }: ClaimantAuthFlowProps) {
   const [consentChecked, setConsentChecked] = useState(false)
+  const [whyExpanded, setWhyExpanded] = useState(false)
 
   const handleContinue = () => {
     if (consentChecked) {
@@ -28,8 +29,8 @@ export default function ClaimantAuthFlow({
   }
 
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center p-6">
-      <div className="w-full max-w-[480px] space-y-8">
+    <div className="min-h-screen bg-white flex items-start justify-center px-5 py-8 sm:items-center sm:p-6">
+      <div className="w-full max-w-[480px] space-y-7">
 
         {/* Progress Indicator */}
         <div className="space-y-2">
@@ -42,29 +43,29 @@ export default function ClaimantAuthFlow({
         </div>
 
         {/* Overlapping Logos */}
-        <div className="flex justify-center relative h-24">
-          <div className="absolute left-1/2 transform -translate-x-16 top-0">
+        <div className="flex justify-center relative h-20 sm:h-24">
+          <div className="absolute left-1/2 transform -translate-x-14 sm:-translate-x-16 top-0">
             {firmLogoUrl ? (
-              <img 
-                src={firmLogoUrl} 
+              <img
+                src={firmLogoUrl}
                 alt={firmName}
-                className="w-20 h-20 rounded-full border-4 border-white shadow-lg object-cover"
+                className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-4 border-white shadow-lg object-cover"
               />
             ) : (
-              <div className="w-20 h-20 rounded-full bg-gray-800 border-4 border-white flex items-center justify-center shadow-lg">
-                <span className="text-white font-black text-xl">{firmName.charAt(0)}</span>
+              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gray-800 border-4 border-white flex items-center justify-center shadow-lg">
+                <span className="text-white font-black text-lg sm:text-xl">{firmName.charAt(0)}</span>
               </div>
             )}
           </div>
-          <div className="absolute right-1/2 transform translate-x-16 top-0">
+          <div className="absolute right-1/2 transform translate-x-14 sm:translate-x-16 top-0">
             {payerLogoUrl ? (
-              <img 
-                src={payerLogoUrl} 
+              <img
+                src={payerLogoUrl}
                 alt={payerName}
-                className="w-20 h-20 rounded-full border-4 border-white shadow-lg object-cover"
+                className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-4 border-white shadow-lg object-cover"
               />
             ) : (
-              <div className="w-20 h-20 rounded-full bg-[#0F2044] border-4 border-white flex items-center justify-center shadow-lg">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#0F2044] border-4 border-white flex items-center justify-center shadow-lg">
                 <span className="text-white font-black text-sm text-center px-2 leading-tight">{payerName.substring(0, 3)}</span>
               </div>
             )}
@@ -109,6 +110,23 @@ export default function ClaimantAuthFlow({
           </div>
         </div>
 
+        {/* Why expander */}
+        <div>
+          <button
+            type="button"
+            onClick={() => setWhyExpanded(!whyExpanded)}
+            className="min-h-[44px] flex items-center gap-1 text-[#0F2044] text-base font-semibold underline underline-offset-2 decoration-[#0F2044]/40 hover:decoration-[#0F2044] transition-all"
+            aria-expanded={whyExpanded}
+          >
+            Why does my lawyer need this? {whyExpanded ? '↑' : '→'}
+          </button>
+          {whyExpanded && (
+            <p className="mt-3 text-[0.95rem] font-medium text-[#0F2044]/70 leading-relaxed">
+              Disability cases are won or lost on the strength of your medical evidence. Sharing your insurance claims history helps your lawyer find every doctor and treatment that supports your case.
+            </p>
+          )}
+        </div>
+
         {/* Checkbox */}
         <div className="flex items-start gap-3">
           <input
@@ -116,7 +134,7 @@ export default function ClaimantAuthFlow({
             id="consent-checkbox"
             checked={consentChecked}
             onChange={(e) => setConsentChecked(e.target.checked)}
-            className="w-5 h-5 mt-1 cursor-pointer accent-[#0F2044]"
+            className="w-6 h-6 mt-0.5 cursor-pointer accent-[#0F2044] flex-shrink-0"
           />
           <label htmlFor="consent-checkbox" className="text-[1.05rem] font-semibold text-gray-800 cursor-pointer leading-relaxed">
             I agree to RightOfAccess&apos;s{' '}
@@ -134,7 +152,7 @@ export default function ClaimantAuthFlow({
         <button
           onClick={handleContinue}
           disabled={!consentChecked}
-          className={`w-full py-4 px-6 rounded-xl font-black text-lg tracking-wide transition-all ${
+          className={`w-full min-h-[56px] py-4 px-6 rounded-2xl font-black text-lg tracking-wide transition-all ${
             consentChecked
               ? 'bg-[#0F2044] text-white hover:bg-[#1a3a5c] cursor-pointer'
               : 'bg-gray-200 text-gray-400 cursor-not-allowed'
