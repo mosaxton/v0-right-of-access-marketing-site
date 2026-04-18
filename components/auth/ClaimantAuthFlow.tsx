@@ -31,6 +31,16 @@ export default function ClaimantAuthFlow({
     <div className="min-h-screen bg-white flex items-center justify-center p-6">
       <div className="w-full max-w-[480px] space-y-8">
 
+        {/* Progress Indicator */}
+        <div className="space-y-2">
+          <p className="text-center text-sm font-semibold text-[#0F2044] tracking-wide">
+            Step 1 of 2
+          </p>
+          <div className="w-full h-1.5 bg-gray-200 rounded-full overflow-hidden">
+            <div className="h-full w-1/2 bg-[#0F2044] rounded-full" />
+          </div>
+        </div>
+
         {/* Overlapping Logos */}
         <div className="flex justify-center relative h-24">
           <div className="absolute left-1/2 transform -translate-x-16 top-0">
@@ -64,7 +74,7 @@ export default function ClaimantAuthFlow({
         {/* Heading */}
         <div className="text-center pt-2">
           <h1 className="text-[2rem] font-black text-black leading-tight tracking-tight text-balance">
-            {firmName} wants to access your {payerName} insurance data
+            {firmName} is requesting your {payerName} claims history
           </h1>
         </div>
 
@@ -109,7 +119,7 @@ export default function ClaimantAuthFlow({
             className="w-5 h-5 mt-1 cursor-pointer accent-[#0F2044]"
           />
           <label htmlFor="consent-checkbox" className="text-[1.05rem] font-semibold text-gray-800 cursor-pointer leading-relaxed">
-            I have read and agree to the{' '}
+            I agree to RightOfAccess&apos;s{' '}
             <Link href="/terms" className="text-[#0F2044] underline underline-offset-2 hover:opacity-80 transition-opacity">
               Terms of Service
             </Link>
@@ -117,7 +127,6 @@ export default function ClaimantAuthFlow({
             <Link href="/privacy" className="text-[#0F2044] underline underline-offset-2 hover:opacity-80 transition-opacity">
               Privacy Policy
             </Link>
-            {' '}of RightOfAccess
           </label>
         </div>
 
@@ -136,7 +145,7 @@ export default function ClaimantAuthFlow({
 
         {/* Footer */}
         <p className="text-center text-sm font-medium text-gray-500">
-          Questions? Call your firm at {firmPhone}
+          Questions? Call {firmName} at {firmPhone}.
         </p>
       </div>
     </div>
