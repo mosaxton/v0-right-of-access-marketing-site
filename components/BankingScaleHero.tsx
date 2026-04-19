@@ -22,7 +22,7 @@ export const BankingScaleHero = () => {
               <span className="text-gold">In 60 Seconds.</span>
             </h1>
             <p className="text-lg text-foreground mb-8 leading-relaxed">
-              RightOfAccess pulls your client's complete provider history from their insurance claims data — every doctor, every diagnosis, every prescription. $49/case as a recoverable expense.
+              RightOfAccess pulls your client's complete provider history from their insurance claims data — every doctor, every diagnosis, every prescription.
             </p>
             <div className="flex flex-wrap gap-4">
               <a
@@ -37,10 +37,23 @@ export const BankingScaleHero = () => {
                 href="https://calendly.com/mosaxton-s/free-demo-call"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="brutalist-button inline-flex items-center gap-3 bg-gold text-foreground px-8 py-4 rounded-full font-black text-lg"
+                className="brutalist-button inline-flex items-center gap-3 bg-muted text-foreground border-2 border-black px-8 py-4 rounded-full font-black text-lg"
               >
-                Get 3 Cases Free
+                Start Free Pilot
               </a>
+            </div>
+
+            {/* Trust Pills */}
+            <div className="flex flex-wrap gap-3 mt-6 pt-6 border-t-2 border-black/10">
+              <div className="inline-flex items-center px-4 py-2 rounded-full border-2 border-primary text-primary font-bold text-xs tracking-wide">
+                HIPAA Compliant
+              </div>
+              <div className="inline-flex items-center px-4 py-2 rounded-full border-2 border-primary text-primary font-bold text-xs tracking-wide">
+                BAA Included
+              </div>
+              <div className="inline-flex items-center px-4 py-2 rounded-full border-2 border-primary text-primary font-bold text-xs tracking-wide">
+                SOC 2 in progress
+              </div>
             </div>
           </div>
 

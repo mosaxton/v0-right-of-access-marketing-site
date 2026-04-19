@@ -23,11 +23,18 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Right of Access - Medical Records Retrieval for Law Firms",
-  description: "Streamline medical records retrieval for personal injury cases. Secure, compliant, and 10x faster than manual processes.",
+  title: "RightOfAccess — Provider Discovery for SSDI Law Firms",
+  description: "RightOfAccess pulls your client's complete provider history from insurance claims data — every doctor, every diagnosis, every prescription. Built for SSDI disability law firms.",
   generator: "v0.app",
   icons: {
-    icon: "/icon.svg",
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-32.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16.png", type: "image/png", sizes: "16x16" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180" },
+    ],
   },
 }
 
