@@ -30,7 +30,7 @@ export const PricingSection = () => {
         {/* Primary Pricing Card - Centered */}
         <div className="max-w-md mx-auto mb-12">
           <div className="brutalist-card bg-primary rounded-[2rem] p-10 text-center flex flex-col">
-            <div className="text-7xl font-black text-primary-foreground mb-2">$199</div>
+            <div className="text-7xl font-black text-primary-foreground mb-2">$149</div>
             <div className="text-primary-foreground/80 font-bold text-lg mb-8">per case</div>
 
             <ul className="space-y-3 mb-10 text-left max-w-sm mx-auto">
